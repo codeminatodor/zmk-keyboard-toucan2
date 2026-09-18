@@ -8,6 +8,9 @@ manifest:
       url-base: https://github.com/geeksville
     - name: beekeeb
       url-base: https://github.com/beekeeb
+    - name: zmk-unicode
+      remote: urob
+      revision: v0.3
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -22,5 +25,8 @@ manifest:
     - name: zmk-input-zoom
       remote: beekeeb
       revision: main
+    - name: zmk-unicode
+      remote: urob
+      revision: v0.3
   self:
     path: config
