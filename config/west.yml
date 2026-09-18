@@ -10,7 +10,6 @@ manifest:
       url-base: https://github.com/beekeeb
     - name: urob
       url-base: https://github.com/urob
-      revision: v0.3
   projects:
     - name: zmk
       remote: zmkfirmware
