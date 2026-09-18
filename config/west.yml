@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/geeksville
     - name: beekeeb
       url-base: https://github.com/beekeeb
-    - name: zmk-unicode
-      remote: urob
+    - name: urob
+      url-base: https://github.com/urob
       revision: v0.3
   projects:
     - name: zmk
