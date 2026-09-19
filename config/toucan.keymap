@@ -4,32 +4,32 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define BASE 0
-#define NAV  1
-#define NUM  2
-#define FUN  3
-#define MOU  4
-#define SYS  5
+#define MAIN 0
+#define NAVI 1
+#define NUMB 2
+#define FUNC 3
+#define MOUS 4
+#define SYST 5
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
+        // tri_layer {
+        //     if-layers = <1 2>;
+        //     then-layer = <3>;
+        // };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
         base {
-            display-name = "BASE";
+            display-name = "MAIN";
             bindings = <
-                &lt NUM ESC    &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I         &kp O    &kp P     &kp MINUS
-                &kp LG(SPACE)  &kp A &kp S &kp D &kp F &kp G      &kp H &kp J  &kp K         &kp L    &kp SEMI  &kp DQT
-                &kp TAB        &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp GRAVE
-                               &kp LSHFT   &kp LCTRL   &kp SPACE  &lt NAV RET   &kp BSPC &lt SYS LBRC
+                &lt NUM ESC    &kp Q     &kp W     &kp E      &kp R &kp T      &kp Y &kp U  &kp I         &kp O    &kp P     &kp MINUS
+                &kp LG(SPACE)  &kp A     &kp S     &kp D      &kp F &kp G      &kp H &kp J  &kp K         &kp L    &kp SEMI  &kp DQT
+                &kp TAB        &kp Z     &kp X     &kp C      &kp V &kp B      &kp N &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp GRAVE
+                               &kp LSHFT &kp LCTRL &kp SPACE                   &lt NAV RET  &kp BSPC &lt SYS LBRC
             >;
         };
 
@@ -63,19 +63,18 @@
             >;
         };
 
-
         mouse {
             display-name = "MOUSE";
             bindings = <
-                &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
-                            &mkp MCLK &mkp LCLK &mkp RCLK           &mkp LCLK &mkp RCLK &mkp MCLK
+            &trans &trans &trans    &trans    &trans &trans                   &msc SCRL_UP &trans &trans    &trans &trans &trans
+            &trans &trans &trans    &trans    &trans &trans                   &msc SCRL_DOWN MCLK &trans    &trans &trans &trans &trans
+            &trans &trans &trans    &trans    &msc SCRL_LEFT &msc SCRL_RIGHT  &mkp RCLK           &trans    &trans &trans &trans &trans
+                          &mkp MCLK &mkp LCLK &mkp RCLK                       &mkp LCLK           &mkp RCLK &mkp MCLK
             >;
         };
 
         sys {
-            display-name = "system";
+            display-name = "syst";
             bindings = <
                 &bt BT_CLR      &bt BT_SEL  0  &bt BT_SEL  1 &bt BT_SEL  2 &bt BT_SEL  3 &bt BT_SEL  4   &none &none &none &none &none &none
                 &bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &none &none &none &none &none &none
