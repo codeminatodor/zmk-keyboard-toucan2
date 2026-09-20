@@ -29,7 +29,7 @@
                 &lt NUMB ESC   &kp Q  &kp W  &kp E     &kp R     &kp T        &kp Y &kp U   &kp I        &kp O    &kp P     &lt FUNC MINUS
                 &kp LG(SPACE)  &kp A  &kp S  &kp D     &kp F     &kp G        &kp H &kp J   &kp K        &kp L    &kp SEMI  &kp SQT
                 &lt FUNC TAB   &kp Z  &kp X  &kp C     &kp V     &kp B        &kp N &kp M   &kp COMMA    &kp DOT  &kp FSLH  &kp GRAVE
-                                      &kp LSHFT  &kp LCTRL &kp SPACE          &lt NAVI RET  &lt NUMB BSPC  &lt SYST LBRC
+                                      &kp LSHFT  &kp LCTRL &kp SPACE          &lt NAVI RET  &lt NUMB BSPC  &lt SYST LBKT
             >;
         };
 
