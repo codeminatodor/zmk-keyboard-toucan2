@@ -38,8 +38,8 @@
             bindings = <
                 &none &none &none &none &none &kp C_BRI_UP      &kp C_VOL_UP  &kp HOME    &kp UP     &kp END    &none &none
                 &none &none &none &none &none &kp C_BRI_DN      &kp C_VOL_DN  &kp LEFT    &kp DOWN   &kp RIGHT  &none &none
-                &none &none &none &none &none &none      &kp C_MUTE    &kp PG_UP   &kp INS    &kp PG_DN  &none &kp PSCRN
-                                  &trans &trans &trans   &none         &kp DEL     &none
+                &none &none &none &none &none &none             &kp C_MUTE    &kp PG_UP   &kp INS    &kp PG_DN  &none &kp PSCRN
+                                  &trans &trans &trans          &LBKT         &kp DEL     &LBKT
             >;
         };
 
@@ -76,10 +76,10 @@
         sys {
             display-name = "syst";
             bindings = <
-                &bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &none &none &none &none &none &none
+                &bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none &none &none &none &none &none
                 &bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &none &none &none &none &none &none
                 &studio_unlock  &out OUT_TOG   &none         &none         &none         &bootloader     &bootloader &none &none &none &none &none
-                                               &none &none   &none                                    &none &none &none
+                                               &none &none   &none                                       &none &none &none
             >;
         };
 
