@@ -47,24 +47,15 @@
     };
 
 behaviors {
-        // Шаг 1: макрос, эмулирующий "удержание" BSPC на N мс
-        bspc_hold: bspc_hold {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <600>;
-            bindings = <&macro_tap &kp BSPC>;
-        };
-
-        // Шаг 2: тап-данс — 1 нажатие = обычный BSPC, 2 нажатия = "удержание" BSPC
+        // Тап-данс: 1 нажатие = обычный BSPC, 2 нажатия (и удержание после) = зажатый BSPC
         td_bspc: td_bspc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp BSPC>, <&bspc_hold>;
+            bindings = <&kp BSPC>, <&kp BSPC>;
         };
 
-        // Шаг 3: hold-tap — тап вызывает td_bspc, долгое нажатие держит слой NUMB
+        // Hold-tap — тап вызывает td_bspc, долгое нажатие держит слой NUMB
         hm_bspc: hm_bspc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
