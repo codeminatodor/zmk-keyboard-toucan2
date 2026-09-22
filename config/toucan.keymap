@@ -65,37 +65,37 @@
                 &none &none &none &none &none &kp C_BRI_UP      &kp C_VOL_UP  &kp HOME   &kp UP     &kp END    &none &none
                 &none &none &none &none &none &kp C_BRI_DN      &kp C_VOL_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &none &kp SLCK
                 &none &none &none &none &none &none             &kp C_MUTE    &kp PG_UP  &kp INS    &kp PG_DN  &none &kp PSCRN
-                                  &trans &trans &trans          &kp BSPC      &kp DEL    &kp LBKT
+                                  &trans &trans &trans          &none         &kp DEL    &kp LBKT
             >;
         };
 
         num {
             display-name = "num";
             bindings = <
-                &none &kp LALT &none  &none        &kp FSLH      &kp LBKT      &kp RBKT     &kp N7     &kp N8  &kp N9  &kp N0   &kp EQUAL
-                &none &none    &none  &none        &kp BSLH      &kp LBRC      &kp RBRC     &kp N4     &kp N5  &kp N6  &kp BSLH &kp FSLH
-                &none &none    &none  &quote_left  &quote_right  &kp LS(N9)    &kp LS(N0)   &kp N1     &kp N2  &kp N3  &kp DOT   &kp COMMA
-                               &trans &trans &trans                            &kp BSPC     &none      &kp N0
+                &none &kp LALT &none  &none        &kp FSLH      &kp LBKT      &kp RBKT     &kp N7   &kp N8  &kp N9  &kp N0   &kp EQUAL
+                &none &none    &none  &none        &kp BSLH      &kp LBRC      &kp RBRC     &kp N4   &kp N5  &kp N6  &kp BSLH &kp FSLH
+                &none &none    &none  &quote_left  &quote_right  &kp LS(N9)    &kp LS(N0)   &kp N1   &kp N2  &kp N3  &kp DOT  &kp COMMA
+                               &trans &trans &trans                            &kp BSPC     &none    &kp N0
             >;
         };
  
         fun {
             display-name = "funct";
             bindings = <
-            &mo TAB   &trans &kp F7 &kp F8 &kp F9 &kp F12    &none    &none    &kp LCTRL &kp RALT  &kp LSHFT &none
-            &kp LCTRL &trans &kp F4 &kp F5 &kp F6 &kp F11    &none    &none    &none     &none      &none     &none
-            &none     &trans &kp F1 &kp F2 &kp F3 &kp F10    &none    &none    &none     &none      &none     &none
-                             &kp LSHFT &kp LCTRL  &kp SPACE   &kp RET  &kp LGUI &kp RALT
+            &mo TAB   &trans &kp F7 &kp F8 &kp F9 &kp F10      &none    &none     &kp LCTRL  &kp RALT   &kp LSHFT  &none
+            &kp LCTRL &trans &kp F4 &kp F5 &kp F6 &kp F11      &none    &none     &none      &none      &none      &none
+            &none     &trans &kp F1 &kp F2 &kp F3 &kp F12      &none    &none     &none      &none      &none      &none
+                             &kp LSHFT &kp LCTRL  &kp SPACE    &kp RET  &kp LGUI  &kp K_APP
             >;
         };
-
+ 
         mouse {
             display-name = "MOUSE";
             bindings = <
-            &trans &trans &trans    &trans    &trans &trans                   &msc SCRL_UP   &trans    &trans    &trans &trans &trans
-            &trans &trans &trans    &trans    &trans &trans                   &msc SCRL_DOWN &trans    &trans &trans &trans &trans
-            &trans &trans &trans    &trans    &msc SCRL_LEFT &msc SCRL_RIGHT  &mkp RCLK      &trans    &trans &trans &trans &trans
-                          &mkp MCLK &mkp LCLK &mkp RCLK                       &mkp LCLK      &mkp RCLK  &mkp MCLK
+            &trans &trans &trans    &trans    &trans &trans     &msc SCRL_UP    &trans     &trans    &trans &trans &trans
+            &trans &trans &trans    &trans    &trans &trans     &msc SCRL_DOWN  &trans     &trans    &trans &trans &trans
+            &trans &trans &trans    &trans    &msc SCRL_LEFT    &msc SCRL_RIGHT &mkp RCLK  &trans    &trans &trans &trans &trans
+                          &mkp MCLK &mkp LCLK &mkp RCLK         &mkp LCLK       &mkp RCLK  &mkp MCLK
             >;
         };
 
