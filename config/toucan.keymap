@@ -64,12 +64,12 @@ behaviors {
             bindings = <&kp BSPC>, <&bspc_hold>;
         };
 
-        // Шаг 3: hold-tap — тап вызывает td_bspc, долгое нажатие держит слой NAVI
+        // Шаг 3: hold-tap — тап вызывает td_bspc, долгое нажатие держит слой NUMB
         hm_bspc: hm_bspc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&td_bspc>;
         };
