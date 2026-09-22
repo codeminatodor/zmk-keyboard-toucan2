@@ -45,6 +45,35 @@
                 , <&macro_release &kp LALT>;
         };
     };
+
+behaviors {
+        // Шаг 1: макрос, эмулирующий "удержание" BSPC на N мс
+        bspc_hold: bspc_hold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <600>;
+            bindings = <&macro_tap &kp BSPC>;
+        };
+
+        // Шаг 2: тап-данс — 1 нажатие = обычный BSPC, 2 нажатия = "удержание" BSPC
+        td_bspc: td_bspc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp BSPC>, <&bspc_hold>;
+        };
+
+        // Шаг 3: hold-tap — тап вызывает td_bspc, долгое нажатие держит слой NAVI
+        hm_bspc: hm_bspc {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&td_bspc>;
+        };
+    };
  
     keymap {
         compatible = "zmk,keymap";
@@ -55,7 +84,7 @@
                 &lt NUMB ESC   &kp Q  &kp W  &kp E     &kp R     &kp T        &kp Y &kp U   &kp I          &kp O    &kp P     &lt FUNC MINUS
                 &kp LG(SPACE)  &kp A  &kp S  &kp D     &kp F     &kp G        &kp H &kp J   &kp K          &kp L    &kp SEMI  &kp SQT
                 &lt FUNC TAB   &kp Z  &kp X  &kp C     &kp V     &kp B        &kp N &kp M   &kp COMMA      &kp DOT  &kp FSLH  &kp GRAVE
-                                             &kp LSHFT &kp LCTRL &kp SPACE    &lt NAVI RET  &lt NUMB BSPC  &lt SYST LBKT
+                                             &kp LSHFT &kp LCTRL &kp SPACE    &lt NAVI RET  &hm_bspc NUMB 0  &lt SYST LBKT
             >;
         };
 
