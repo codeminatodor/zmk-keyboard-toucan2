@@ -94,7 +94,7 @@ behaviors {
             bindings = <
                 &none &kp LALT &none  &none        &kp FSLH      &kp LBKT        &kp RBKT     &kp N7   &kp N8  &kp N9  &kp N0   &kp EQUAL
                 &none &none    &none  &none        &kp BSLH      &kp LBRC        &kp RBRC     &kp N4   &kp N5  &kp N6  &kp BSLH &kp FSLH
-                &none &none    &none  &quote_left  &quote_right  &kp KP_RPAR     &kp KP_LPAR  &kp N1   &kp N2  &kp N3  &kp DOT  &kp COMMA
+                &none &none    &none  &quote_left  &quote_right  &kp LPAR        &kp RPAR  &kp N1   &kp N2  &kp N3  &kp DOT  &kp COMMA
                                &trans &trans &trans                              &kp BSPC     &none    &kp N0
             >;
         };
