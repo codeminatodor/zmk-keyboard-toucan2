@@ -112,10 +112,10 @@ behaviors {
         mouse {
             display-name = "MOUSE";
             bindings = <
-            &trans &trans &trans    &trans    &trans &trans     &msc SCRL_UP    &trans     &trans    &trans &trans &trans
-            &trans &trans &trans    &trans    &trans &trans     &msc SCRL_DOWN  &trans     &trans    &trans &trans &trans
-            &trans &trans &trans    &trans    &msc SCRL_LEFT    &msc SCRL_RIGHT &mkp RCLK  &trans    &trans &trans &trans &trans
-                          &mkp MCLK &mkp LCLK &mkp RCLK         &mkp LCLK       &mkp RCLK  &mkp MCLK
+            &trans &trans &trans    &trans    &trans &trans     &msc SCRL_UP    &trans         &trans   &trans  &trans  &trans
+            &trans &trans &trans    &trans    &trans &trans     &msc SCRL_DOWN  &msc SCRL_LEFT &msc SCRL_RIGHT    &trans  &trans  &trans
+            &trans &trans &trans    &trans    &msc SCRL_LEFT    &mkp MB4        &mkp MB5       &trans    &trans  &trans  &trans &trans
+                          &mkp MCLK &mkp LCLK &mkp RCLK         &mkp LCLK       &mkp RCLK      &mkp MCLK
             >;
         };
 
