@@ -45,26 +45,7 @@
                 , <&macro_release &kp LALT>;
         };
     };
-
-behaviors {
-        // Тап-данс: 1 нажатие = обычный BSPC, 2 нажатия (и удержание после) = зажатый BSPC
-        td_bspc: td_bspc {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp BSPC>, <&kp BSPC>;
-        };
-
-        // Hold-tap — тап вызывает td_bspc, долгое нажатие держит слой NUMB
-        hm_bspc: hm_bspc {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&td_bspc>;
-        };
-    };
+ 
  
     keymap {
         compatible = "zmk,keymap";
