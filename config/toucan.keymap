@@ -62,7 +62,7 @@
         };
 
         nav {
-            display-name = "nav";?
+            display-name = "nav";
             bindings = <
                 &none  &trans &trans    &trans  &trans     &trans      &kp C_VOL_UP  &kp HOME   &kp UP     &kp END    &none &kp PAUSE_BREAK
                 &none  &trans &trans    &trans  &trans     &trans      &kp C_VOL_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &none &kp SLCK
