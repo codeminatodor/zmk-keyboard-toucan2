@@ -104,20 +104,20 @@
         sys {
             display-name = "syst";
             bindings = <
-                &bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4      &to 6        &none  &none &none &none &none
+                &bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4      &to GAML       &none  &none &none &none &none
                 &bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4     &none        &none  &none &none &none &none
                 &studio_unlock  &out OUT_TOG   &none         &none          &none          &bootloader       &bootloader  &none  &none &none &none &none
                                                &none &none   &none                                           &none        &none  &none
             >;
         };
-
+		
 		gameL {
             display-name = "gameL";
             bindings = <
                 &kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp T       &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6
                 &kp LALT   &kp A  &kp S  &kp D  &kp F  &kp G       &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL
                 &kp ESC    &kp Z  &kp X  &kp C  &kp V  &kp B       &trans  &trans  &trans  &trans  &trans     &trans
-                            &kp LSHFT   &kp LCTRL      &kp SPACE   &trans  &trans  &to 0
+                            &kp LSHFT   &kp LCTRL      &kp SPACE   &trans  &trans  &to MAIN
             >;
         };
 
